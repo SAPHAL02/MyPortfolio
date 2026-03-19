@@ -332,6 +332,53 @@
     font-size: 0.68rem; color: var(--lime); margin-top: 20px;
   }
 
+  /* ── ACHIEVEMENTS ── */
+  .achievements {
+    padding: clamp(60px,8vw,100px) clamp(20px,5vw,60px) 0;
+  }
+  .achievements-header { max-width: 500px; margin-bottom: 44px; }
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .achievement-card {
+    background: var(--bg3);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: clamp(22px,3vw,32px);
+    transition: transform 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .achievement-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(200,255,87,0.04), transparent);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .achievement-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(200,255,87,0.2);
+  }
+  .achievement-card:hover::before { opacity: 1; }
+  .achievement-icon {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+  .achievement-title {
+    font-weight: 700;
+    font-size: clamp(0.95rem,1.6vw,1.1rem);
+    margin-bottom: 6px;
+    position: relative; z-index: 1;
+  }
+  .achievement-desc {
+    font-size: clamp(0.76rem,1.2vw,0.82rem);
+    color: var(--muted);
+    line-height: 1.6;
+    position: relative; z-index: 1;
+  }
+
   /* ── PROJECTS ── */
   .projects { padding: clamp(60px,8vw,100px) clamp(20px,5vw,60px); }
   .projects-header { margin-bottom: 52px; }
@@ -485,6 +532,7 @@
 
   /* Tablet landscape */
   @media (max-width: 1024px) {
+    .achievements-grid { grid-template-columns: repeat(2, 1fr); }
     .projects-grid { grid-template-columns: repeat(2, 1fr); }
     .exp-card.featured { grid-column: 1 / -1; }
   }
@@ -512,6 +560,7 @@
     .exp-grid { grid-template-columns: 1fr; }
     .exp-card.featured { grid-column: 1; }
 
+    .achievements-grid { grid-template-columns: 1fr 1fr; }
     .edu-grid { grid-template-columns: 1fr 1fr; }
     .projects-grid { grid-template-columns: 1fr 1fr; }
 
@@ -521,6 +570,7 @@
   /* Mobile portrait */
   @media (max-width: 480px) {
     .hero-right { grid-template-columns: 1fr; }
+    .achievements-grid { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
     .edu-grid { grid-template-columns: 1fr; }
     .contact-links { flex-direction: column; align-items: stretch; }
@@ -629,26 +679,52 @@
     <div class="section-label">Experience</div>
     <h2 class="section-title">Where I've<br>Made an Impact</h2>
   </div>
+
+  <div class="achievements-grid" style="margin-bottom: 40px;">
+    <div class="achievement-card reveal">
+      <div class="achievement-icon">🏆</div>
+      <div class="achievement-title">Impact Guardian Award</div>
+      <div class="achievement-desc">Recognized for exceptional technical contributions and consistent delivery</div>
+    </div>
+    <div class="achievement-card reveal">
+      <div class="achievement-icon">⭐</div>
+      <div class="achievement-title">Employee of the Quarter</div>
+      <div class="achievement-desc">Multiple-time recipient at Arcadia for sustained high performance</div>
+    </div>
+    <div class="achievement-card reveal">
+      <div class="achievement-icon">👥</div>
+      <div class="achievement-title">Team Mentor</div>
+      <div class="achievement-desc">Onboarded & mentored engineers, accelerating independent contributions</div>
+    </div>
+    <div class="achievement-card reveal">
+      <div class="achievement-icon">📈</div>
+      <div class="achievement-title">1500+ Tickets</div>
+      <div class="achievement-desc">Highest resolution count on team, driving system reliability at scale</div>
+    </div>
+  </div>
+
   <div class="exp-grid">
     <div class="exp-card featured reveal">
       <div class="exp-company">Arcadia · Urjanet Energy Solutions Pvt Ltd</div>
       <div class="exp-role">Software Engineer II</div>
-      <div class="exp-period">July 2024 — Present</div>
+      <div class="exp-period">July 2024 — Present · Bhubaneswar, India (Remote)</div>
       <ul class="exp-list">
-        <li>Resolved <strong>1500+ Jira tickets</strong> addressing code-level issues in Java-based utility bill data extraction pipelines, ensuring data integrity via regression testing.</li>
-        <li>Built a custom <strong>Java Eclipse plugin</strong> to automate regression testing for data connectors, cutting manual effort by 85%.</li>
-        <li>Co-developed a <strong>JavaScript Chrome extension</strong> to linkify console log data, accelerating issue analysis and data downloads by 70%.</li>
-        <li>Boosted team velocity by mentoring a new engineer, facilitating daily Scrum meetings, and contributing 50+ system improvements.</li>
+        <li>Resolved <strong>1500+ Jira tickets</strong>, the highest across the team, applying structured problem-solving and independent decision-making to identify root causes and deliver reliable solutions, improving system reliability through upgraded error handling.</li>
+        <li>Maintained high data extraction accuracy by developing and debugging <strong>Java-based utility bill data extraction pipelines</strong>, resolving complex code-level issues across CAPTCHA, bot protection, and anti-scraping mechanisms to ensure end-to-end data integrity.</li>
+        <li>Built a custom <strong>Java Eclipse plugin</strong> to automate regression testing for data connectors, eliminating <strong>85% of manual testing effort</strong> and enabling faster, more accurate deployments across the engineering workflow.</li>
+        <li>Co-developed a <strong>JavaScript Chrome extension</strong> to linkify console log data, accelerating issue analysis and data downloads by <strong>70%</strong>, streamlining debugging workflows for the entire team.</li>
+        <li>Mentored and onboarded a new software engineer, facilitating daily Scrum meetings and knowledge-sharing sessions that reduced ramp-up time and accelerated independent contributions.</li>
+        <li>Awarded the <strong>Impact Guardian Award</strong> and <strong>Employee of the Quarter</strong> for exceptional technical contributions and consistent high performance.</li>
       </ul>
-      <div class="exp-highlight">⚡ 85% reduction in manual effort</div>
+      <div class="exp-highlight">⚡ 85% reduction in manual effort · 1500+ tickets resolved</div>
     </div>
     <div class="exp-card reveal">
       <div class="exp-company">Arcadia · Urjanet Energy Solutions Pvt Ltd</div>
       <div class="exp-role">Software Engineer Intern</div>
-      <div class="exp-period">Sept 2023 — June 2024</div>
+      <div class="exp-period">Sept 2023 — June 2024 · Bhubaneswar, India (Remote)</div>
       <ul class="exp-list">
-        <li>Resolved <strong>300+ technical issues</strong> and data requests, building a strong foundation in sustainable data practices.</li>
-        <li>Participated in technical learning sessions and code reviews to rapidly enhance software development skills and industry best practice knowledge.</li>
+        <li>Resolved <strong>300+ technical issues</strong> and data requests, applying structured debugging and root-cause analysis to build a strong foundation in sustainable data extraction practices.</li>
+        <li>Actively participated in technical learning sessions and code reviews, rapidly enhancing software development skills and contributing to team knowledge on industry best practices.</li>
       </ul>
     </div>
   </div>
