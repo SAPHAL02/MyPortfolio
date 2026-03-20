@@ -388,7 +388,7 @@
     background: var(--bg3);
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 16px; padding: clamp(22px,3vw,32px);
-    padding-bottom: clamp(56px,6vw,64px);
+    padding-bottom: clamp(22px,3vw,32px);
     position: relative; overflow: hidden;
     transition: transform 0.3s, border-color 0.3s;
     min-width: 0;
@@ -406,16 +406,6 @@
     letter-spacing: 0.08em; margin-bottom: 14px;
   }
   .project-desc { font-size: clamp(0.78rem,1.3vw,0.84rem); color: var(--muted); line-height: 1.65; }
-  .project-arrow {
-    position: absolute; bottom: 22px; right: 22px;
-    width: 34px; height: 34px;
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--muted); font-size: 0.9rem;
-    transition: background 0.3s, border-color 0.3s, color 0.3s;
-  }
-  .project-card:hover .project-arrow { background: var(--lime); border-color: var(--lime); color: var(--bg); }
 
   /* ── EDUCATION ── */
   .education {
@@ -602,6 +592,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="Saphal_Agarwal_Resume.pdf" download>Resume</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -612,6 +603,7 @@
   <a href="#projects"   onclick="closeMenu()">Projects</a>
   <a href="#education"  onclick="closeMenu()">Education</a>
   <a href="#contact"    onclick="closeMenu()">Contact</a>
+  <a href="Saphal_Agarwal_Resume.pdf" download onclick="closeMenu()">Resume</a>
 </div>
 
 <section class="hero">
@@ -633,6 +625,7 @@
     <div class="hero-cta">
       <a href="#contact" class="btn-primary">Get in touch ↗</a>
       <a href="#projects" class="btn-ghost">View work</a>
+      <a href="Saphal_Agarwal_Resume.pdf" download class="btn-ghost">Download Resume ↓</a>
     </div>
   </div>
 
@@ -740,21 +733,18 @@
       <div class="project-name">YCAP: Eclipse Plugin</div>
       <div class="project-tech">Java · Maven · Eclipse API</div>
       <p class="project-desc">Automation plugin that handles log parsing, code modification, and REST API validation — cutting manual testing effort by 85% and enabling faster, more accurate deployments.</p>
-      <div class="project-arrow">↗</div>
     </div>
     <div class="project-card reveal">
       <div class="project-num">02</div>
       <div class="project-name">RentLog</div>
       <div class="project-tech">Dart · Flutter · Firebase</div>
       <p class="project-desc">A Flutter app streamlining owner-tenant communication: bill management, due dates, complaint tracking, and unique room IDs for granular data privacy control.</p>
-      <div class="project-arrow">↗</div>
     </div>
     <div class="project-card reveal">
       <div class="project-num">03</div>
       <div class="project-name">StudentQRGen</div>
       <div class="project-tech">Python · Tkinter · MySQL</div>
       <p class="project-desc">GUI tool that generates QR codes from student information with MySQL-backed secure storage, authenticated access, and clean data management workflows.</p>
-      <div class="project-arrow">↗</div>
     </div>
   </div>
 </section>
@@ -790,7 +780,7 @@
   <div class="contact-glow"></div>
   <div class="reveal">
     <h2 class="contact-title">Let's build<br><span>something great.</span></h2>
-    <p class="contact-sub">Currently open to new opportunities · Based in Bhubaneswar, Odisha</p>
+    <p class="contact-sub">Software Engineer crafting impactful solutions · Based in Bhubaneswar, Odisha</p>
     <div class="contact-links">
       <a href="mailto:agarwalsaphal@gmail.com" class="contact-link">
         <span class="contact-link-icon">✉</span>
@@ -800,7 +790,7 @@
         <span class="contact-link-icon">📞</span>
         +91 6370058339
       </a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-link">
+      <a href="https://www.linkedin.com/in/saphalagarwal/" target="_blank" rel="noopener" class="contact-link">
         <span class="contact-link-icon">in</span>
         LinkedIn Profile
       </a>
