@@ -398,7 +398,9 @@
     font-weight: 800; font-size: clamp(2.5rem,5vw,4rem);
     color: rgba(200,255,87,0.06); line-height: 1;
     margin-bottom: 14px; letter-spacing: -0.05em;
+    transition: color 0.3s;
   }
+  .project-card:hover .project-num { color: var(--lime); }
   .project-name { font-weight: 700; font-size: clamp(0.95rem,1.8vw,1.1rem); margin-bottom: 6px; }
   .project-tech {
     font-family: 'JetBrains Mono', monospace;
@@ -586,7 +588,7 @@
 <div class="orb orb3"></div>
 
 <nav>
-  <div class="nav-logo">SA<span>.</span></div>
+  <a href="#" class="nav-logo" style="text-decoration:none;color:inherit;">SA<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -608,10 +610,6 @@
 
 <section class="hero">
   <div class="hero-left">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      Available for opportunities
-    </div>
     <h1 class="hero-title">
       <span>Saphal</span>
       <span class="accent">Agarwal</span>
@@ -708,7 +706,6 @@
         <li>Mentored and onboarded a new software engineer, collaborated cross-functionally with QA and product teams, facilitating daily Scrum meetings and knowledge-sharing sessions that reduced ramp-up time and accelerated independent contributions.</li>
         <li>Awarded the <strong>Impact Guardian Award</strong> and <strong>Employee of the Quarter</strong> for exceptional technical contributions and consistent high performance.</li>
         <li>Authored and maintained <strong>automated unit tests</strong> for Java components within the Eclipse plugin to ensure code reliability and high-quality software standards.</li>
-        <li>Applied <strong>object-oriented design patterns</strong> to refactor core Java components, enhancing the modularity, maintainability, and scalability of automated data pipeline testing tools.</li>
       </ul>
       <div class="exp-highlight">⚡ 85% reduction in manual effort · 1500+ tickets resolved</div>
     </div>
